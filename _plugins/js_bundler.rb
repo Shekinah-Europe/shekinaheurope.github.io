@@ -7,6 +7,7 @@ module Jekyll
     safe true
     priority :low
 
+
     def matches(ext)
       ext =~ /^\.bundle$/i
     end
