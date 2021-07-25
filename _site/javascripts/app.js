@@ -69,47 +69,35 @@ jQuery(document).foundation();
 
     });
 
+  
+
     $('form#contact_form').validate({
+      debug: true,
       messages: { },
       submitHandler: function(form) {
         $.ajax({
           type: 'POST',
-          url: 'send.php',
-          data: $(form).serialize(),
+          url: 'https://formsubmit.co/ajax/admin@shekinaheurope.org',
+          data: JSON.stringify( $(form).serialize() ),
+          dataType: 'json',
+          accepts: 'application/json',
           success: function(data) {
-            if(data.match(/success/)) {
+            if(JSON.stringify(data).includes("The form was submitted successfully")) {
+              console.log(data)
+              console.log(JSON.stringify( $(form).serializeArray() ))
               $(form).trigger('reset');
               $('#thanks').show().fadeOut(5000);
-            }
           }
+            
+          },
+          error: (err) => console.log(err)
         });
         return false;
       }
     });
 
-    if($('.masonry-container').length > 0) {
-
-      $('.masonry-container').each(function() {
-        var that = $(this);
-
-        // initialize Masonry after all images have loaded
-        $(that).imagesLoaded(function() {
-
-          setTimeout(function() {
-            window.msnry = new Masonry($(that)[0], {
-              itemSelector: '.mod',
-              // columnWidth: '.mod',
-              gutter: 30
-            });
-
-            // window.msnry.layout();
-
-          }, 10);
-
-        });
-
-      });
-    }
+   
+  
 
 
     // onepage nav scroll
