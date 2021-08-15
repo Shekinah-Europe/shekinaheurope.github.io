@@ -21,6 +21,9 @@
 - name: Donate
   path: donate.html
   section_id: donate
+- name: Volunteer
+  path: volunteer.html
+  section_id: volunteer
 #- name: Blog
 #  path: blog/
 #  section_id: blog
