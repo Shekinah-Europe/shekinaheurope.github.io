@@ -44,7 +44,7 @@
   <script src="/javascripts/imagesloaded.pkgd.min.js" type="text/javascript"></script>
   <script src="/javascripts/slick.min.js" type="text/javascript"></script>
 
-  <link rel="canonical" href="/portfolio.html">
+  <link rel="canonical" href="/portfolio.html.bak">
   <link rel="alternate" type="application/rss+xml" title="Shekinah Europe" href="/feed.xml" />
 </head>
 
@@ -358,7 +358,6 @@
       <div class='spacing'></div>
       <h4>Contact us</h4>
       <ul>
-        <li>Phone: +44 0790 877 2956</li>
         <li>Emial: admin@shekinaheurope.org</li>
         <li>Location: 14 LANGLEY GARDENS, WOLVERHAMPTON, WV3 7JN</li>
       </ul>
